@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Rental Contracts — Launch Film v3 (3D)</title>
+<style>
+@font-face{font-family:'Plex';font-weight:500;src:url(FONT500) format('woff')}
+@font-face{font-family:'Plex';font-weight:700;src:url(FONT700) format('woff')}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#000}
+body{font-family:'Plex','Segoe UI',Arial,sans-serif;color:#fff;font-weight:500;-webkit-font-smoothing:antialiased}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden}
+#gl{position:absolute;inset:0}
+.abs{position:absolute}
+.mask{overflow:hidden;display:block}.mask>span{display:block}
+#cap{position:absolute;left:110px;top:70px}
+#capk{font-size:26px;font-weight:700;color:#4CC2BF;letter-spacing:2px}
+#capt{font-size:78px;font-weight:700;letter-spacing:-3px;line-height:1.06;padding-bottom:10px;text-shadow:0 4px 40px rgba(0,0,0,.5)}
+.glass{background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.22);border-radius:36px;backdrop-filter:blur(26px);box-shadow:0 30px 80px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.35)}
+#intro{position:absolute;left:0;width:1920px;top:330px;text-align:center;transform-origin:50% 50%}
+#intro .l{font-size:150px;font-weight:700;letter-spacing:-6px;line-height:1.05}
+#stats{position:absolute;right:110px;top:90px;display:flex;gap:22px;opacity:0}
+.stat{padding:26px 38px;text-align:left;min-width:230px}
+.stat b{display:block;font-size:92px;letter-spacing:-4px;line-height:1}
+.stat span{font-size:24px;color:#BFE9E7}
+#pay{position:absolute;right:110px;bottom:100px;display:flex;gap:22px;opacity:0}
+#appr{position:absolute;left:50%;margin-left:-640px;bottom:90px;width:1280px;padding:36px 54px 30px;opacity:0}
+.an{width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.14);font-size:34px;font-weight:700;text-align:center;line-height:76px}
+#stamp{position:absolute;right:130px;top:-62px;font-size:40px;font-weight:700;color:#7DF5C5;border:6px solid #7DF5C5;border-radius:18px;padding:10px 28px;background:rgba(0,30,24,.65);opacity:0}
+#lang{position:absolute;left:50%;margin-left:-520px;bottom:100px;width:1040px;padding:42px 56px;opacity:0;display:flex;align-items:center;justify-content:space-between}
+#l_title{font-size:84px;font-weight:700;letter-spacing:-3px}
+#l_sub{font-size:34px;color:#BFE9E7;margin-top:8px}
+#l_btn{background:#009969;color:#fff;border-radius:99px;padding:16px 36px;font-size:32px;font-weight:700;white-space:nowrap}
+#fin{position:absolute;left:0;width:1920px;top:250px;text-align:center;opacity:0}
+#fin .t{font-size:124px;font-weight:700;letter-spacing:-5px;line-height:1.03;padding-bottom:6px}
+.chip{border-radius:99px;padding:14px 34px;font-size:34px;font-weight:700;display:inline-block}
+#fade{position:absolute;inset:0;background:#000;pointer-events:none}
+</style></head><body><div id="stage">
+<div id="gl"></div>
+<div id="intro"><div class="l mask"><span id="i1">Rent contracts</span></div><div class="l mask"><span id="i2">everywhere.</span></div><div class="l mask" style="color:#FF8A8F;font-size:84px;letter-spacing:-3px;margin-top:18px"><span id="i3">Payments slipping · Deadlines missed</span></div></div>
+<div id="cap"><div id="capk" class="mask"><span></span></div><div id="capt" class="mask" data-i="-1"><span></span></div></div>
+<div id="stats"><div class="glass stat"><b id="s_reg">0</b><span>regions</span></div><div class="glass stat"><b id="s_co">0</b><span>companies</span></div><div class="glass stat"><b id="s_con">0</b><span>active contracts</span></div></div>
+<div id="pay"><div class="glass stat" style="display:flex;align-items:center;gap:26px;min-width:420px"><svg width="120" height="120" viewBox="0 0 170 170"><circle cx="85" cy="85" r="70" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="20"/><circle id="p_ring" cx="85" cy="85" r="70" fill="none" stroke="#7DF5C5" stroke-width="20" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" transform="rotate(-90 85 85)"/></svg><div><b id="p_pct">0%</b><span>collected</span></div></div>
+ <div class="glass stat" style="border-color:rgba(255,120,125,.5)"><b id="p_od" style="color:#FF8A8F">0</b><span>overdue · action needed</span></div></div>
+<div id="appr" class="glass"><div id="stamp">FULLY APPROVED</div><div style="font-size:30px;font-weight:700;margin-bottom:26px">Renewal · Warehouse Jeddah</div>
+ <div style="position:relative;height:130px">STEPPER</div></div>
+<div id="lang" class="glass"><div><div id="l_title">Rental Contracts</div><div id="l_sub">One platform for every lease</div></div><div id="l_btn">EN | عربي</div></div>
+<div id="dimmer" class="abs" style="inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(1,8,7,.9),rgba(1,8,7,.6));opacity:0"></div>
+<div id="fin"><div style="height:230px"><img id="flogo" style="width:210px;opacity:0"></div><div class="t mask"><span id="f1">Every contract</span></div><div class="t mask" style="color:#7DF5C5"><span id="f2">under control</span></div><div id="fch" style="margin-top:46px"><span class="chip" style="background:#fff;color:#0B0F0E">SWAG</span> <span class="chip" style="background:#00594F">LA ROCHE</span> <span class="chip" style="background:#4CC2BF;color:#00231F">LA ROCHE GOLD</span></div></div>
+<div id="fade"></div>
+</div>
+<script>window.__MAP=MAPJSON;window.__LOGO="LOGO0";</script>
+<script>BUNDLE</script></body></html>
